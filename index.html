@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>GAME</title>
+</head>
+<script>
+    let userInput = ""; // 入力値を保存する変数
+
+    function openPopup() {
+        userInput = prompt("入力してください:"); // ポップアップでユーザーからの入力を受け取る
+    }
+
+    function checkShiftAndRedirect(event) {
+        if (event.shiftKey && userInput) {
+            window.location.href = userInput; // Shiftキーを押したら変数URLに移動
+        }
+    }
+</script>
+</head>
+<body>
+    <button onclick="openPopup()">ポップアップを開く</button>
+
+    <script>
+        // Shiftキーの状態を監視して移動する関数を呼び出す
+        document.addEventListener("keydown", checkShiftAndRedirect);
+    </script>
+    <center>
+        <h1>cell to singularity</h1>
+        <body>
+            <iframe src="https://celltosingularity.com/c2s/" width="800" height="600" frameborder="0"></iframe>
+        </body>
+</html>
